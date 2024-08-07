@@ -1,15 +1,24 @@
 import events from "events"
-import { EventEmitter } from "stream"
+import EventEmitter from "events"
 
-const emitter = new EventEmitter()
+export const emitter = new EventEmitter()
 
-const user = "Name"
-const message = "User message"
+export const data = [{
+    user: "Ion",
+    message: "Думаю да, нужно где-то в проекте  поиграться с этим"
+}, {
+    user: "Vadim",
+    message: "Ты разобрался с events?"
+},
+{
+    user:"Oxana",
+    message:"Опять непонятная формулировка  задания!"
+}]
 
-const sendMessage= (user, message) =>{
- console.log(`${user}: ${message}`)
+ export const sendMessage = (user, message, eventEmitter) => {
+    eventEmitter.emit("message", {user, message})
 }
 
-emitter.on("message", sendMessage(user, message))
-
-emitter.emit("message")
+emitter.on("message", (data)=>{
+    console.log(`${data.user}: ${data.message}`)
+})
