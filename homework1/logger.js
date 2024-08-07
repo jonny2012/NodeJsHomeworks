@@ -11,3 +11,9 @@ export const logMessage = (message) =>{
 
     })
 }
+
+// const firstMessage = "First Message, \n"
+// const secondMessage = "Second Message, \n"
+// logMessage(firstMessage)
+// logMessage(secondMessage)
+// logMessage("Third Message, \n")
