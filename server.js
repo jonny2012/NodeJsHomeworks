@@ -9,6 +9,11 @@ app.get("/", (req, res) => {
 
     res.send("Server is running")
 })
+// сначала я думал  сделать как в презентации но меня волновал  пункт 3 
+// немного они намудрили  с формулировкой  пунктов  но вроде все правильно сделал 
+// совсем нет разнообразия в заданиях
+// чтобы проверить просто раскоментите  по  одному заданию 
+
 // задание 1
 // sendMessage(data[1].user, data[1].message, emitter)
 // sendMessage(data[0].user, data[0].message, emitter)
@@ -19,9 +24,10 @@ app.get("/", (req, res) => {
 // logEvent(logData[0].logType, logData[0].status, logger)
 // logEvent(logData[2].logType, logData[2].status, logger)
 
-startBackup(filenames[0].filename, backupEvent)
-startBackup(filenames[2].filename, backupEvent)
-startBackup(filenames[1].filename, backupEvent)
+// задание 3
+// startBackup(filenames[0].filename, backupEvent)
+// startBackup(filenames[2].filename, backupEvent)
+// startBackup(filenames[1].filename, backupEvent)
 
 app.listen(port, () => {
     console.log(`Server is running on ${port} `)
